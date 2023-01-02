@@ -27,7 +27,7 @@ function Page() {
         While there are infinite prime numbers, they get progressively more rare. Currently, the average gap between 
         two consecutive prime timestamps is a little larger than 20. In addition to the timestamp, the contract also computes whether the 
         year, month, day, hour, minute and second of the mint time are prime numbers. The first NFT that has all its 
-        properties prime won't be minted until the year 2027.
+        properties prime will not be minted until the year 2027.
         </p>
     </div>
     <div className={styles.c}>
