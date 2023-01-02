@@ -27,7 +27,7 @@ export function MintNFT() {
         overrides: {
             from: address,
             value: ethers.utils.parseEther('0.1'),
-            gasLimit: 600000,
+            gasLimit: ethers.BigNumber.from(600000),
           },
     })
     const { data, error, isError, write } = useContractWrite(config)
@@ -38,7 +38,7 @@ export function MintNFT() {
 
     return (
         <div className={styles.c}>
-            <button className={styles.bigblue} disabled={!write || isLoading} onClick={() => write()}>
+            <button className={styles.bigblue} disabled={!write || isLoading} onClick={() => write === undefined ? undefined : write() }>
                 {isLoading ? 'Minting...' : 'Mint'}
             </button>
             {isSuccess && (
