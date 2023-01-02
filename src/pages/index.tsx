@@ -16,7 +16,7 @@ function Page() {
     <p className={styles.txt}> PrimeTime is the first fully on chain NFT on Avalanche.
         This means all data and code needed 
         to render the NFTs are fully on the C chain. This is in contrast to most other NFTs that store their data on
-        IPFS, Arweave, or even centralized infrastructure. In other wordsm you will be able to access your 
+        IPFS, Arweave, or even centralized infrastructure. In other words, you will be able to access your 
         NFTs even if IPFS stops existing. 
         </p>
         </div>
