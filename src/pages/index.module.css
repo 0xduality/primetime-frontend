@@ -1,0 +1,57 @@
+.bg {
+  background-image: url('./pt.png');
+  background-repeat: 'space';
+  background-size: '30px';
+}
+
+.multibg {
+  background-image: url(pt.png);
+  background-repeat: no-repeat;
+  background-position: 5% 85%;
+  background-size: 20%;
+}
+
+.multibg::before{
+  background-image: url(pt.png), url(bg.png);
+  background-repeat: no-repeat,   no-repeat;
+  background-position: 85% 5%, top left;
+  background-size: 10%, 100%;
+  content:"";
+  opacity:0.5;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  width:auto;
+  height:auto;
+  z-index:-3;
+}
+
+
+.bigblue {
+  background-color: #3434ff; /* vivid blue color */
+  border-radius: 10px; /* rounded edges */
+  padding: 10px; /* generous padding */
+
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  font-size: 18px; /* larger font size */
+  font-weight: bold; /* stronger font weight */
+}
+
+.c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt {
+    width: 40em; /* approximately 80 characters per line */
+    text-align: justify; /* justify the text */
+    font-family: sans-serif; /* choose a sans-serif font for easier readability */
+    font-weight: bold; /* increase the font weight to make it stronger */
+    line-height: 1.5;
+}
+
