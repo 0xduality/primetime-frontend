@@ -7,8 +7,7 @@ import {
     useWaitForTransaction,
 } from 'wagmi'
 
-import styles from '../pages/index.module.css';
-//import styles from './vivid.module.css'; 
+import styles from '../index.module.css';
 
 export function MintNFT() {
     const { address } = useAccount()

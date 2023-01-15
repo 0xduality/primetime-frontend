@@ -1,15 +1,16 @@
 import { ConnectKitButton } from 'connectkit'
 import { useAccount } from 'wagmi'
 
-import { Account } from '../components'
+import { Account, MintNFT } from './components'
 
 import styles from './index.module.css';
 
-function Page() {
+export function App() {
   const { isConnected } = useAccount()
   return (
+    <div className={styles.multibg}>
     <>
-    <div className={styles.c}>
+      <div className={styles.c}>
       <h1>Welcome to PrimeTime</h1>
     </div>
     <div className={styles.c}>
@@ -34,12 +35,22 @@ function Page() {
       <p className={styles.txt}> The exact apperance of your NFT depends on mint time, see the marketplaces below to get an idea. 
       </p>
     </div>
+
     <div className={styles.c}>
       <ConnectKitButton />
-      {isConnected && <Account />}
+    </div>
+    <div><p></p></div>
+      <MintNFT/>
+      <div className={styles.c}>
+      <p className={styles.txt}> Verified 
+      contracts: <a href="https://snowtrace.io/address/0xa0825be23abb4c817fe83e6202718ee227c772b8">PrimeTime</a> <a href="https://snowtrace.io/address/0xf9fb465fbe44d27c3d651aa25d57b6d980aeacee">Renderer</a> 
+      </p>
+    </div>
+    <div className={styles.c}>
+      <p className={styles.txt}> Marketplaces: <a href="https://opensea.io/collection/primetime-avax">OpenSea</a> <a href="https://joepegs.com/collections/0xa0825be23abb4c817fe83e6202718ee227c772b8">Joepegs</a> <a href="https://campfire.exchange/collections/0xa0825be23abb4c817fe83e6202718ee227c772b8">Campfire</a> 
+      </p>
     </div>
     </>
+    </div>
   )
 }
-
-export default Page
